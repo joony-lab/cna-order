@@ -68,4 +68,13 @@ spring:
           contentType: application/json
 api:
   url:
-    payment: http://payment:8080
+    payment: ${configurl}
+
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution.isolation.thread.timeoutInMilliseconds: 680
