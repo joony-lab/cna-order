@@ -68,7 +68,8 @@ spring:
           contentType: application/json
 api:
   url:
-    payment: ${configurl}
+    payment: http://payment:8080
+#    payment: ${configurl}
 
 feign:
   hystrix:
